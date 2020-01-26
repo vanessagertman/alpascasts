@@ -1,4 +1,4 @@
-package __PACKAGE__
+package com.vanessa.alpascasts
 
 import dev.alpas.Alpas
 

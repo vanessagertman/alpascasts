@@ -1,6 +1,6 @@
-package __PACKAGE__.database.migrations
+package com.vanessa.alpascasts.database.migrations
 
-import __PACKAGE__.entities.Users
+import com.vanessa.alpascasts.entities.Users
 import dev.alpas.auth.PasswordResetTokens
 import dev.alpas.ozone.migration.Migration
 

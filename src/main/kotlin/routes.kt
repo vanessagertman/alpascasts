@@ -1,6 +1,6 @@
-package __PACKAGE__
+package com.vanessa.alpascasts
 
-import __PACKAGE__.controllers.WelcomeController
+import com.vanessa.alpascasts.controllers.WelcomeController
 import dev.alpas.routing.RouteGroup
 import dev.alpas.routing.Router
 

@@ -1,6 +1,6 @@
-package __PACKAGE__.configs
+package com.vanessa.alpascasts.configs
 
-import __PACKAGE__.entities.Users
+import com.vanessa.alpascasts.entities.Users
 import dev.alpas.Environment
 import dev.alpas.auth.SessionAuthChannel
 import dev.alpas.auth.AuthConfig as BaseConfig
