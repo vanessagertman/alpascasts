@@ -14,46 +14,32 @@
 <div id="app" class="flex h-screen m-auto flex-col">
     <div class="pb-16 flex flex-col justify-center w-full max-w-4xl mx-auto flex-grow">
         <div class="mx-auto">
-            <?xml version="1.0" encoding="UTF-8"?>
-            <svg width="306px" height="88px" viewBox="0 0 306 88" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                 xmlns:xlink="http://www.w3.org/1999/xlink">
-                <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
-                <title>AlpasCastsLogo</title>
-                <desc>Created with Sketch.</desc>
-                <g id="WebsiteDesign" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
-                   font-family="Noteworthy-Light, Noteworthy" font-size="72" font-weight="300">
-                    <g id="Artboard" transform="translate(-214.000000, -57.000000)" fill="#123EC3">
-                        <g id="AlpasCastsLogo" transform="translate(214.000000, 28.000000)">
-                            <g id="Group">
-                                <g id="AlpasCasts">
-                                    <text>
-                                        <tspan x="0.05625" y="92">AlpasCasts</tspan>
-                                    </text>
-                                </g>
-                            </g>
-                        </g>
-                    </g>
-                </g>
-            </svg>
-
+            <img src="/AlpasCastsLogo.svg"/>
         </div>
-        <h1>Welcome to AlpasCasts! The perfect place to start learning how to use the awesome new Kotlin Web Framework
-            <a class="text-blue-300" href="https://alpas.dev/" target="blank">Alpas</a>.</h1>
+        <div class="flex flex-row justify-between container mx-auto pt-12">
+            <div class="flex flex-col w-1/2">
+
+                <h1 class="text-3xl">Welcome to AlpasCasts!</h1>
+                <div class="text-xl leading-chill mt-4">
+
+                    <p>
+                        AlpasCasts is the perfect place to start learning how to use the awesome
+                        new Kotlin Web Framework
+                        <a class="text-blue-700" href="https://alpas.dev/" target="blank">Alpas</a>.
+                    </p>
+                    <p class="pt-3">
+                        Check out the videos below to get started!
+                    </p>
+                </div>
+
+            </div>
+            <div class="self-center justify-end flex md:flex hidden">
+                <img class="w-48 lg:w-2/3" src="/undraw_tutorial_video_7dns.svg">
+            </div>
+        </div>
 
     </div>
 
-    <div class="bg-purple-600 border rounded-lg max-w-sm mx-auto overflow-hidden">
-            <div class="relative pb-2/3">
-                <img class="absolute h-full w-full object-cover" src="/windowsSDKMan.png" alt="Install with GitBash">
-
-            </div>
-        <div class="p-6">
-            <h4 class="font-semibold text-lg">Installing SDKMan on Windows with GitBash</h4>
-            <div>Walk through of setting up SDKMan on Windows using GitBash. Includes instructions on installing ConEmu
-                (a better Windows terminal) and zip (so you can run SDKMan).
-            </div>
-        </div>
-    </div>
 
 </div>
 </body>
