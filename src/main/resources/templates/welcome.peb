@@ -11,12 +11,12 @@
 
 <body>
 
-<div id="app" class="flex h-screen m-auto flex-col">
+<div id="app" class="flex  m-auto flex-col bg-gray-200">
     <div class="pb-16 flex flex-col justify-center w-full max-w-4xl mx-auto flex-grow">
-        <div class="mx-auto">
+        <div class="mx-auto mt-12">
             <img src="/AlpasCastsLogo.svg"/>
         </div>
-        <div class="flex flex-row justify-between container mx-auto pt-12">
+        <div class="flex flex-row justify-between container mx-auto py-12">
             <div class="flex flex-col w-1/2">
 
                 <h1 class="text-3xl">Welcome to AlpasCasts!</h1>
@@ -38,6 +38,37 @@
             </div>
         </div>
 
+        <div class="pt-12">
+            <h2 class="text-xl mb-3 uppercase">Mac Set up</h2>
+
+            <div class="flex flex-row ">
+                <div class="text-gray-700 text-center  px-4 py-2 m-2">
+
+                    <iframe id="ytplayer" type="text/html" width="480" height="270"
+                            src="https://www.youtube.com/embed/neFL3ajsUTk"
+                            frameborder="0"></iframe>
+                </div>
+            </div>
+        </div>
+
+        <div class="pt-12">
+            <h2 class="text-xl mb-3 uppercase">Windows Set up</h2>
+
+            <div class="flex flex-row ">
+                <div class="text-gray-700 text-center  px-4 py-2 m-2">
+
+                    <iframe id="ytplayer" type="text/html" width="480" height="270"
+                            src="https://www.youtube.com/embed/80pTki0iUsc"
+                            frameborder="0"></iframe>
+                </div>
+                <div class="text-gray-700 text-center  px-4 py-2 m-2">
+
+                    <iframe id="ytplayer" type="text/html" width="480" height="270"
+                            src="https://www.youtube.com/embed/hFiFQcfT9U0"
+                            frameborder="0"></iframe>
+                </div>
+            </div>
+        </div>
     </div>
 
 
