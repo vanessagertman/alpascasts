@@ -1,4 +1,3 @@
-{# @pebvariable name="playlist" type="com.vanessa.alpascasts.entities.Playlist" #}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,6 +10,7 @@
 </head>
 
 <body>
+
 <div id="app" class="flex  m-auto flex-col bg-gray-200">
     <div class="pb-16 flex flex-col justify-center w-full max-w-4xl mx-auto flex-grow">
         <div class="mx-auto mt-12">
@@ -39,18 +39,18 @@
         </div>
 
         <div class="flex flex-row justify-between container pt-12">
-        {% for playlist in playlists %}
-            <series-card title="{{  playlist.title}}" description="{{  playlist.description}}" image="{{  playlist.image_path}}" alt="{{ playlist.title }}">
-
-            </series-card>
-        {% endfor %}
+            <series-card title="Mac Installation"
+                         description="Videos related to tools and machine set up for a Mac computer."
+                         image="/undraw_Hello.svg" alt="Install on Mac"></series-card>
+            <series-card title="Windows Installation"
+                         description="Videos related to tools and machine set up for a Windows computer."
+                         image="/undraw_setup_wizard.svg" alt="Install on Windows"></series-card>
         </div>
 
         <div class="pt-12">
             <h2 class="text-xl mb-3 uppercase">Mac Set up</h2>
 
             <div class="flex flex-row ">
-
                 <div class="text-gray-700 text-center  px-4 py-2 m-2">
 
                     <iframe id="ytplayer" type="text/html" width="480" height="270"
