@@ -39,50 +39,11 @@
         </div>
 
         <div class="flex flex-row justify-between container pt-12">
-        {% for playlist in playlists %}
-            <series-card title="{{  playlist.title}}" description="{{  playlist.description}}" image="{{  playlist.image_path}}" alt="{{ playlist.title }}">
+        {% for playlists_video in playlists_videos %}
+            <series-card :playlist="{{ playlists_video | json_encode }}" >
 
             </series-card>
         {% endfor %}
-        </div>
-
-        <div class="pt-12">
-            <h2 class="text-xl mb-3 uppercase">Mac Set up</h2>
-
-            <div class="flex flex-row ">
-
-                <div class="text-gray-700 text-center  px-4 py-2 m-2">
-
-                    <iframe id="ytplayer" type="text/html" width="480" height="270"
-                            src="https://www.youtube.com/embed/neFL3ajsUTk"
-                            frameborder="0"></iframe>
-                </div>
-                <div class="text-gray-700 text-center  px-4 py-2 m-2">
-
-                    <iframe id="ytplayer" type="text/html" width="480" height="270"
-                            src="https://www.youtube.com/embed/0yhDcMRW8ro"
-                            frameborder="0"></iframe>
-                </div>
-            </div>
-        </div>
-
-        <div class="pt-12">
-            <h2 class="text-xl mb-3 uppercase">Windows Set up</h2>
-
-            <div class="flex flex-row ">
-                <div class="text-gray-700 text-center  px-4 py-2 m-2">
-
-                    <iframe id="ytplayer" type="text/html" width="480" height="270"
-                            src="https://www.youtube.com/embed/80pTki0iUsc"
-                            frameborder="0"></iframe>
-                </div>
-                <div class="text-gray-700 text-center  px-4 py-2 m-2">
-
-                    <iframe id="ytplayer" type="text/html" width="480" height="270"
-                            src="https://www.youtube.com/embed/hFiFQcfT9U0"
-                            frameborder="0"></iframe>
-                </div>
-            </div>
         </div>
     </div>
 
