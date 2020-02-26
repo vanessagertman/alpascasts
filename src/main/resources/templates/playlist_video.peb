@@ -17,9 +17,9 @@
             <img src="/AlpasCastsLogo.svg"/>
         </div>
 
-        <div class="pt-12">
-            <div class="m-2 bg-white border rounded-lg overflow-hidden">
-                <iframe id="ytplayer" type="text/html" width="800" height="451"
+        <div class="pt-12 px-3">
+            <div class="m-2 bg-white border overflow-hidden">
+                <iframe id="ytplayer" type="text/html" width="854" height="480"
                         src="{{ video.link }}"
                         frameborder="0"></iframe>
                 <div class="p-6 bg-gray-400">
@@ -28,6 +28,11 @@
                         <mark-down description="{{ video.description }}"> </mark-down>
                     </div>
                 </div>
+            </div>
+            <div class="m-4">
+                <h1 class="text-2xl underline">{{ playlist.title }}</h1>
+                <playlist-video-list :videos="{{ videos | json_encode }}" :current="{{ video.id }}"></playlist-video-list>
+
             </div>
         </div>
     </div>
