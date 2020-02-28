@@ -1,12 +1,12 @@
 package com.vanessa.alpascasts.entities
 
-import dev.alpas.ozone.MigratingTable
+import dev.alpas.ozone.OzoneEntity
+import dev.alpas.ozone.OzoneTable
 import dev.alpas.ozone.bigIncrements
-import me.liuwj.ktorm.entity.Entity
 import me.liuwj.ktorm.schema.int
 import me.liuwj.ktorm.schema.varchar
 
-interface Playlist : Entity<Playlist> {
+interface Playlist : OzoneEntity<Playlist> {
 
     var id: Long
     var title: String
@@ -15,8 +15,8 @@ interface Playlist : Entity<Playlist> {
     var priority: Int
 }
 
-object Playlists : MigratingTable<Playlist>("playlists") {
-    val id by bigIncrements("id").bindTo { it.id }
+object Playlists : OzoneTable<Playlist>("playlists") {
+    val id by bigIncrements()
     val title by varchar("title").bindTo { it.title }
     val description by varchar("description").bindTo { it.description }
     val imagePath by varchar("image_path").bindTo { it.imagePath }

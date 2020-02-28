@@ -3,18 +3,18 @@ package com.vanessa.alpascasts.entities
 import dev.alpas.auth.Authenticatable
 import dev.alpas.auth.UserProvider
 import dev.alpas.md5
-import dev.alpas.ozone.MigratingTable
+import dev.alpas.ozone.OzoneEntity
+import dev.alpas.ozone.OzoneTable
 import dev.alpas.ozone.bigIncrements
 import me.liuwj.ktorm.dsl.eq
-import me.liuwj.ktorm.entity.Entity
 import me.liuwj.ktorm.entity.findById
 import me.liuwj.ktorm.entity.findOne
 import me.liuwj.ktorm.schema.timestamp
 import me.liuwj.ktorm.schema.varchar
 import java.time.Instant
 
-interface User : Entity<User>, Authenticatable {
-    companion object : Entity.Factory<User>()
+interface User : OzoneEntity<User>, Authenticatable {
+    companion object : OzoneEntity.Of<User>()
 
     override var id: Long
     override var email: String
@@ -36,8 +36,8 @@ interface User : Entity<User>, Authenticatable {
     }
 }
 
-object Users : MigratingTable<User>("users"), UserProvider {
-    val id by bigIncrements("id").bindTo { it.id }
+object Users : OzoneTable<User>("users"), UserProvider {
+    val id by bigIncrements()
     val email by varchar("email").index().unique().bindTo { it.email }
     val password by varchar("password").bindTo { it.password }
     val name by varchar("name").nullable().bindTo { it.name }
