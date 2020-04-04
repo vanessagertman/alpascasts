@@ -1,55 +1,43 @@
 {# @pebvariable name="playlist" type="com.vanessa.alpascasts.entities.Playlist" #}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+{% extends 'layout/app.peb' %}
 
-    <title>AlpasCasts - All the Videos You Need to Get Up and Running on Alpas</title>
-    <link rel="stylesheet" href="{{ mix('css/app.css') }}">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
-</head>
+{% block title %} Delightful Web Development in Kotlin {% endblock %}
 
-<body>
-<div id="app" class="flex  m-auto flex-col bg-gray-200">
-    <div class="pb-16 flex flex-col justify-center w-full max-w-4xl mx-auto flex-grow">
-        <div class="mx-auto mt-12">
-            <img src="/AlpasCastsLogo.svg"/>
-        </div>
-        <div class="flex flex-row justify-between container mx-auto py-12">
-            <div class="flex flex-col w-1/2">
+{% block content %}
+<div id="app" class="flex  m-auto flex-col">
+    <div class="bg-ac-dark-blue">
+        <div class="py-20 px-32 flex flex-col justify-center w-full max-w-4xl mx-auto flex-grow">
+            <h1 class="text-white text-5xl text-center font-bold">Welcome to AlpasCasts</h1>
+            <div class="text-white text-lg leading-chill mt-4 text-center my-8">
+                <p>
+                    AlpasCasts is the perfect place to start learning how to use the awesome
+                    new Kotlin Web Framework
+                    <a class="underline"  href="https://alpas.dev/" target="blank">Alpas</a>
+                </p>
 
-                <h1 class="text-3xl">Welcome to AlpasCasts!</h1>
-                <div class="text-xl leading-chill mt-4">
-
-                    <p>
-                        AlpasCasts is the perfect place to start learning how to use the awesome
-                        new Kotlin Web Framework
-                        <a class="text-blue-700" href="https://alpas.dev/" target="blank">Alpas</a>.
-                    </p>
-                    <p class="pt-3">
+            </div>
+            <div class="text-center flex justify-center pt-20">
+                <div class="w-1/4">
+                    <p class="pt-3 text-white">
                         Check out the videos below to get started!
                     </p>
+                    <i class="fas fa-arrow-down text-white"></i>
                 </div>
 
             </div>
-            <div class="self-center justify-end flex md:flex hidden">
-                <img class="w-48 lg:w-2/3" src="/undraw_tutorial_video_7dns.svg">
-            </div>
-        </div>
-
-        <div class="flex flex-row justify-between container pt-12">
-        {% for playlists_video in playlists_videos %}
-            <series-card :playlist="{{ playlists_video | json_encode }}" >
-
-            </series-card>
-        {% endfor %}
+        {#            </div>#}
         </div>
     </div>
+    <div class="bg-ac-light-gray">
+        <div class="pb-16 flex flex-col justify-center w-full max-w-4xl mx-auto flex-grow">
+            <div class="flex flex-row justify-between container pt-12">
+            {% for playlists_video in playlists_videos %}
+                <series-card :playlist="{{ playlists_video | json_encode }}">
 
-
+                </series-card>
+            {% endfor %}
+            </div>
+        </div>
+    </div>
 </div>
-<script src="{{ mix('js/app.js') }}"></script>
-</body>
-</html>
-
+{% endblock %}

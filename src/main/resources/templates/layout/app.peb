@@ -1,0 +1,23 @@
+{# @pebvariable name="playlist" type="com.vanessa.alpascasts.entities.Playlist" #}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>AlpasCasts - All the Videos You Need to Get Up and Running on Alpas</title>
+    <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/cdcc98deba.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+{% include '_header.peb' %}
+<div>
+{% block content %} {% endblock %}
+</div>
+{% include '_footer.peb' %}
+<script src="{{ mix('js/app.js') }}"></script>
+</body>
+</html>
+

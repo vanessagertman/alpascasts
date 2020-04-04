@@ -1,0 +1,21 @@
+<div class="bg-ac-blue h-20 py-4 text-ac-light-blue text-xl">
+    <div class="flex justify-center flex-wrap">
+
+        <div class="w-1/4 text-right pr-6">
+            &copy; AlpasCasts
+            <script>document.write(new Date().getFullYear())</script>
+        </div>
+
+        <div class="w-1/2">
+            <div class="flex justify-center ">
+                <a class="text-center underline" href="https://alpas.dev/" target="_blank">Alpas</a>
+            </div>
+        </div>
+        <div class="w-1/4 pl-6">
+            <a class="text-2xl px-3" href="https://twitter.com/alpascasts" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a class="text-2xl px-3" href="https://www.youtube.com/channel/UCGCGb-vvmff3csy8dePBJJQ?view_as=subscriber" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a class="text-2xl px-3" href="https://github.com/alpascasts" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+
+    </div>
+</div>

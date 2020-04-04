@@ -1,22 +1,11 @@
-{# @pebvariable name="playlist" type="com.vanessa.alpascasts.entities.Playlist" #}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+{% extends 'layout/app.peb' %}
 
-    <title>AlpasCasts - All the Videos You Need to Get Up and Running on Alpas</title>
-    <link rel="stylesheet" href="{{ mix('css/app.css') }}">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
-</head>
+{% block title %} Delightful Web Development in Kotlin {% endblock %}
 
-<body>
-<div id="app" class="flex  m-auto flex-col bg-gray-200">
+{% block content %}
+
+<div id="app" class="flex  m-auto flex-col bg-ac-light-gray">
     <div class="pb-16 flex flex-col justify-center w-full max-w-4xl mx-auto flex-grow">
-        <div class="mx-auto mt-12">
-            <img src="/AlpasCastsLogo.svg"/>
-        </div>
-
         <div class="pt-12 px-3">
             <div class="m-2 bg-white border overflow-hidden">
                 <iframe id="ytplayer" type="text/html" width="854" height="480"
@@ -36,11 +25,4 @@
             </div>
         </div>
     </div>
-
-
-</div>
-<script src="{{ mix('js/app.js') }}">
-</script>
-</body>
-</html>
-
+{% endblock %}
