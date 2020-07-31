@@ -17,7 +17,7 @@ startScripts {
 mainClassName = 'com.vanessa.alpascasts.StartKt'
 
 group 'com.vanessa.alpascasts'
-version '1.0.0'
+version '1.1.0'
 
 repositories {
     jcenter()
