@@ -13,10 +13,7 @@ class VideoController : Controller() {
     fun index(call: HttpCall) {
         val playlistId = call.routeParam("playlist_id").toString().toLong()
         val videoId = call.routeParam("video_id").toString().toLong()
-
         val video = Videos.findById(videoId) ?: call.abort(404)
-        //todo get the rest of the playlist videos so we can show those too
-        val t = PlaylistVideos.findAll()
         val playlistVideos = PlaylistVideos.findList { it.playlistId eq playlistId }
         val playlist = playlistVideos.first().playlist
         call.render("playlist_video", mapOf("video" to video, "videos" to playlistVideos, "playlist" to playlist))
