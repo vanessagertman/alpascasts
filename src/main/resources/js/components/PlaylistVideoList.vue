@@ -1,17 +1,26 @@
 <template>
     <div>
         <div v-for="video in videos">
+            <hr class="my-4">
             <a :href="videoRoute(video)">
 
-            <div class=" mt-4 m-2 bg-white overflow-hidden flex flex-row bg-gray-400"
-            v-bind:class="videoIsCurrent(video) ? 'border-indigo-600 border-4' : 'border'">
-                <div class="bg-blue-700 text-white text-3xl p-3">{{video.order}}</div>
-                <div class="text-xl mt-4 ml-2">{{video.video.title}}</div>
+            <div class=" mt-4 m-2 overflow-hidden flex flex-row"
+            >
+                <div >
+                    <div v-if="videoIsCurrent(video)" class="rounded-full h-12 w-12 flex items-center justify-center bg-ac-blue text-ac-blue font-extrabold">
+                        <img  src="/current_video.svg"></img>
+                    </div>
+                    <div v-else class="rounded-full h-12 w-12 flex items-center justify-center bg-ac-gray-blue text-ac-blue font-extrabold">
+                        <div v-if="(video.order < 10)">0</div>
+                        {{video.order}}
+                    </div>
+                </div>
+                <div class="ml-2 flex items-center justify-center">{{video.video.title}}</div>
 
             </div>
             </a>
         </div>
-
+        <hr class="mt-4">
     </div>
 </template>
 
@@ -20,13 +29,6 @@
         props: {
             videos: {required: true},
             current: {required: true},
-            // playlistRoute: { required: true},
-        },
-        computed: {
-            // playlistRoute()
-            // {
-            //     return`/playlists/${this.playlist.playlist.id}/videos/${this.playlist.video.id}`
-            // }
         },
         methods: {
             videoIsCurrent(video){
