@@ -5,7 +5,7 @@
 {% block content %}
 
 <div id="app" class="flex  m-auto flex-col bg-ac-light-gray">
-            <div class="m-2  border overflow-hidden">
+            <div class="m-2  border overflow-hidden my-5">
                 <div class="flex items-center justify-center">
                 {#   video#}
                     <div class="mr-5">
@@ -14,7 +14,7 @@
                                 frameborder="0"></iframe>
                     </div>
                 {#   Playlist scroller#}
-                    <div class="bg-white w-1/5 overflow-auto p-5" style="height:480px">
+                    <div class="bg-white w-1/5 overflow-auto  p-5" style="height:480px">
                         <div class="text-lg font-bold mt-4">{{ playlist.title }}</div>
                         <div class="text-sm text-ac-text-gray my-4">{{ videos.size }} videos</div>
                         <playlist-video-list :videos="{{ videos | json_encode }}" :current="{{ video.id }}"></playlist-video-list>
@@ -22,44 +22,49 @@
                 </div>
 
                 {#    Video Details#}
-                <div class="bg-white p-5 mt-5 w-1/2">
-                    <h4 class="mt-1 font-semibold text-xl leading-tight truncate">{{ video.title }}</h4>
-                    <hr class="my-3">
-                    <div>
-                        <h1 class="text-lg">Description</h1>
-                        <p>{{ video.video_details.description }}</p>
-                    </div>
-                    {% if video.video_details.steps != null %}
+                <div class="flex">
+                    <div class="w-1/4"></div>
+                    <div class="bg-white p-5 mt-5 w-1/2">
+                        <h4 class="mt-1 font-semibold text-xl leading-tight truncate">{{ video.title }}</h4>
                         <hr class="my-3">
                         <div>
-                            <h1 class="text-lg">Steps</h1>
-                            <ol class="list-decimal ml-4">
-                            {% for step in video.video_details.steps %}
-                                <li>{{ step }}</li>
-                            {% endfor%}
-                            </ol>
+                            <h1 class="text-lg">Description</h1>
+                            <p>{{ video.video_details.description }}</p>
+                        </div>
+                        {% if video.video_details.steps != null %}
+                            <hr class="my-3">
+                            <div>
+                                <h1 class="text-lg">Steps</h1>
+                                <ol class="list-decimal ml-4">
+                                {% for step in video.video_details.steps %}
+                                    <li>{{ step }}</li>
+                                {% endfor%}
+                                </ol>
 
-                        </div>
-                    {% endif %}
-                    {% if video.video_details.source_code != null %}
-                        <hr class="my-3">
-                        <div>
-                            <h1 class="text-lg">Source Code</h1>
-                            <a class="text-ac-blue" href="{{ video.video_details.source_code }}" target="_blank">{{ video.video_details.source_code }}</a>
-                        </div>
-                    {% endif %}
-                    {% if video.video_details.references != null %}
-                        <hr class="my-3">
-                        <div>
-                            <h1 class="text-lg">Resources</h1>
-                            <ul>
-                            {% for reference in video.video_details.references %}
-                                <li>{{ reference.before_part }} <a class="text-ac-blue" href="{{ reference.link }}" target="_blank">{{ reference.link_text }}</a>{{ reference.after_part }}</li>
-                            {% endfor%}
-                            </ul>
-                        </div>
-                    {% endif %}
+                            </div>
+                        {% endif %}
+                        {% if video.video_details.source_code != null %}
+                            <hr class="my-3">
+                            <div>
+                                <h1 class="text-lg">Source Code</h1>
+                                <a class="text-ac-blue" href="{{ video.video_details.source_code }}" target="_blank">{{ video.video_details.source_code }}</a>
+                            </div>
+                        {% endif %}
+                        {% if video.video_details.references != null %}
+                            <hr class="my-3">
+                            <div>
+                                <h1 class="text-lg">Resources</h1>
+                                <ul>
+                                {% for reference in video.video_details.references %}
+                                    <li>{{ reference.before_part }} <a class="text-ac-blue" href="{{ reference.link }}" target="_blank">{{ reference.link_text }}</a>{{ reference.after_part }}</li>
+                                {% endfor%}
+                                </ul>
+                            </div>
+                        {% endif %}
+                    </div>
+                    <div class="w-1/4"></div>
                 </div>
+
 
             </div>
         </div>
